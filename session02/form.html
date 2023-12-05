@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Form : dùng để lấy,thu nhập dữ liệu gửi lên server
+        Ví dụ: form đăng kí, đăng nhập, khảo sát chất lượng,form điền thông tin covid.....
+        Các thẻ hay dùng trong form
+        -label : nhãn dán cho ô input
+        -input : ô nhập dữ liệu hoặc checkbox
+        -button: nút bấm để submit thông tin lên form
+        -select-option : hiển thị danh sách các lựa chọn
+        -textarea  : tạo 1 ô nhập dữ liệu
+        ****************************
+        Các thuộc tính trong form
+        -action : địa chỉ nơi nhận dữ liệu
+        -khi giá trị thuộc tính for trong label trùng với giá trị thuộc tính id 
+        trong thẻ input thì khi nhấn vào label  tự động forcus vào  ô input đó!
+        -method : phương thức để gửi dữ liệu
+         + sẽ có method get và post
+         + khi lấY dữ liệu về dùng method get
+         + khi gửi dữ liệu lên thì dùng method post(dùng method get thì cũng gửi dữ
+         liệu lên được nhưng không bảo mật)
+         + khi không truyền phương thức nào thì mặc định là method get
+        put : sửa 1 trường dữ liệu cập nhật hết
+        patch : cập nhập 1 key trong 1 trường dữ liệu
+        {
+            name : "tiến",
+            id:1.
+            pass:123
+        }
+        - require : yêu cầu bắt buộc phải nhập field trước khi gửi dữ liệu lên
+        -Các giá trị của thuộc tính type trong thẻ input:
+        1.type:text(mặc định) : mình có thể nhập mọi loại kí tự
+        2.password  : khi nhập giá trị sẽ bị ẩn đi (che lại);
+        3.radio     : chọn 1 ô trong nhiềU ô
+        -Nếu muốn chọn 1 trong nhiều ô thì các ô phải có giá trị thuộc tính name
+        bằng nhau
+        -NếU muốn vào trang mặc định chọn luôn 1 ô thì thêm cho ô thuộc tính checked
+        4.checkbox  : chọn nhiều ô
+        5.id        : dùng để dịnh danh cho element giống như (cccd)
+        6. name     : lấy dữ liệu gửi lên server
+        7.date      : dùng để chọn thời gian
+        8.month     : chọn tháng năm
+        9. color    : chọn mã màu 
+        10.number   : nhập số 
+        11 placeholder : gợi ý nhập dữ liệu vào ô input
+        12. value   : giá trị của ô input
+        13.disable  : không bấm tưƠng tác với element được.
+        14.autocomplate :
+     -->
+     <form action="">
+        <span for="">username</span>
+        <input type="text" name="username" placeholder="mời bạn nhập tên" autocomplete="off"> <br>
+        <label for="tien">password</label>
+        <input id="tien" name="password" type="password" required> <br>
+        <span>Giới tính</span>
+        <input checked name="gender1" type="radio">
+         Nam
+        <input name="gender1" type="radio">
+         Nữ
+        <input name="gender1" type="radio">
+        Giới tính khác
+        <br>
+        <label for="">input- type=date</label>
+        <input type="date"> <br>
+
+        <label for="">input- type=month</label>
+        <input type="month"> <br>
+
+        <label for="">input- type=color</label>
+        <input type="color"> <br>
+
+        <label for="">input- type=number</label>
+        <input type="number"> <br>
+        <input type="text"  value="">
+        <select >
+            <option value="">ăn mì</option>
+            <option value="" selected>ăn phở</option>
+            <option value="">ăn chay</option>
+        </select> 
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button disabled>login</button>
+     </form>
+</body>
+</html>

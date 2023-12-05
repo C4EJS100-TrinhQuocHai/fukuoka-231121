@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        table{
+            width: 300px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- 
+        table : (bảng) dùng để tạo  ra các bảng
+        ví dụ bảng quản lý sinh viên, bảng quản lý danh sách sản phẩm....
+        Cách tạo bảng
+        -dùng thẻ table
+        Các thẻ hay dùng trong bảng
+        -tr: hiển thị hàng
+        -td: hiển thị cột
+        -th: chữ sẽ bôi đậm lên và tự động căn chính giữa trong ô
+        -caption : hiển thị tiêu đề của bảng.
+        Các thuộc tính trong bảng
+        1.border : đường viền 
+        2.align : center-chính giữa,left-bên trái,right: bên phải
+        3.bgcolor: set màu cho cột or cho hàng trong bảng
+        4.cellpadding: là khoảng cách từ text(nội dung) đến viền của ô
+        5.cellspacing: là khoảng cách từ viền của bảng đến viền của ô
+        6.colspan : gộp các  cột lại với nhau
+        7.rowspan : gộp các  hàng
+        8.width   : độ rộng của bảng 
+        9.heith   : chiều của bảng
+        10.vlign  : căn theo chiều dọc của ô
+     -->
+     <table border="1" cellpadding="1" cellspacing="2"  height="50" >
+        <caption>Danh sách học sinh</caption>
+        <thead>
+            <!-- phần đầu của bảng -->
+            <tr>
+                <th >ID học sinh</th>
+                <th>Tên đăng nhập</th>
+                <th>Họ và Tên</th>
+                <th colspan="2">Nghỉ có phép/trạng thái</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- phần thân của bảng -->
+            <tr bgcolor="tomato" >
+                <td  style="padding: 10px;" valign="top" rowspan="2">569</td>
+                <td >TuNQ</td>
+                <td>Nguyễn Quốc Tú</td>
+                <td>Đi học đủ</td>
+                <td>Đã điểm danh</td>
+            </tr>
+            <tr bgcolor="tomato">
+                <td >111</td>
+                <td>11</td>
+                <td>111</td>
+                <td>111</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- phần cuối của bảng -->
+            <tr>
+                <td colspan="4">Tổng số học sinh nam</td>
+                <td>1</td>
+            </tr>
+        </tfoot>
+     </table>
+</body>
+</html>
