@@ -1,0 +1,32 @@
+.heading1{
+    /* ghi CSS trong này */
+    /* */
+    /*  */
+    color: tomato;/* màu chữ , màu text */
+    width: 200px;   /* độ rộng của element */
+    height: 100px; /* chiều cao của element */
+    background-color: rgb(173, 221, 173) /* màu nền cho element */;
+}
+
+#anh{
+    background-color: violet;
+    background-color: red;
+}
+.nguyen {
+    background-color: black;
+}
+h4{
+    background-color: blue !important;
+}
+.hung1{
+    display: inline-block;
+   width: 100px;
+   height: 100px;
+   background-color: red;
+}
+.hung2 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
