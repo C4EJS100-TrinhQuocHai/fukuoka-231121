@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        *{
+            /* background-color: tomato; */
+        }
+        /* div p{
+            color: red;
+        } */
+        div > p{
+            color: red;
+        }
+
+
+
+
+        .title1{
+            
+            color: red;
+            /* background-color: red; */
+            font-size: 50px;
+            /* font-weight: 900; */
+            font-family: Arial, Helvetica, sans-serif;
+            /* 
+            color: được gọi là : thuộc tính (property)
+            green: được gọi là giá trị của thuộc tính
+             */
+        }
+         .title2{
+           
+            color: red;
+            /* background-color: red; */
+            font-size: 50px;
+            /* 
+            color: được gọi là : thuộc tính (property)
+            green: được gọi là giá trị của thuộc tính
+             */
+        }
+        section , article{
+            color: rgb(247, 24, 154);
+        }
+        article + ul {
+            background-color: blue;
+        }
+        /* .btn:hover{
+            background-color: rgb(243, 10, 204);
+            cursor: pointer;
+        } */
+         .btn:active{
+            background-color: rgb(243, 10, 204);
+            cursor: pointer;
+        }
+        .input:focus{
+            background-color: yellow;
+        }
+        .after::after{
+            content: "text phía sau  ";
+        }
+        .before::before{
+            content: "text đằng trước";
+        }
+        .container{
+            background-image: url("../images/animal3.jpg");
+            background-repeat: no-repeat;
+            /* background-size: 100% 100%; */
+            background-position:top right  ;
+        }
+        .title{
+            background-color: #dbdbdb;
+            text-align: center;
+          
+        }
+        a{
+            text-decoration: none;
+            text-transform: uppercase;
+            /* upper case là viết hoa */
+        }
+        .ul{
+            list-style: none;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(11, 223, 11);
+            border: 5px solid red;
+            padding: 5px 10px 15px 20px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            margin-right: 50px ;
+
+            /* rộng : 100px +5px +5px =110 +5px +5px=120px
+            left : (trái) ;top( trên) ; right (phải);
+            bottom (dưới) 
+            */
+        }
+        .box1{
+            display: inline-block;
+        }
+        .anh{
+          position: relative;
+          bottom: 200px;
+          left: 200px;
+        }
+    </style>
+    <!-- 
+        1-color: là màu chữ của text
+        Các kiểu màu trong CSS
+            1.theo tên tiếng anh : red,blue,violet,black,.....
+            2.theo kiểu rgb      : red green blue ( chạy từ 0 đến 255);
+            3.theo kieu rgba   : red green blue anpha
+            anpha chạy từ 0 đến 1
+            nếu để số 1 màu sẽ rực lên
+            còn để số 0 thì màu sẽ bị mờ không thấy
+            4.theo màu hexa
+            5.hsla hue saturation lightness anpha(opacity)
+            hue: 
+            đỏ -dacam- vàng- lục -lam -chàm -tím
+        2-background-color: màu nền 
+        3-font của text
+         3.1: font-size : kích thước của text
+         3.2: font-weight :độ đậm của text
+         3.3: font-family :kiểu chữ, kiểu text
+        4.bộ chọn selector
+        quy tắc đặt tên class chuẩn BEM
+        block element modifier
+        scss
+        *********
+        5. bộ chọn căn chỉnh text
+        6. box-model : mô hình hộp 
+        đối với những thẻ inline thì không set được width và height còn
+        inline-block và block thì set được.
+        width  : độ rộng của khối
+        height : chiều cao của khối
+        BOX-MODEL
+        1.margin  : khoảng cách giữa các khối (element)
+        2.border  : độ dày của viền khối
+        3.padding : khoảng cách từ border đến content
+        4.content : chiều rộng ,chiều dài của nội  dung khối
+        độ rộng và chiều cao của khối không bao gồm margin chỉ tính
+        text + padding + border
+
+     -->
+</head>
+<body>
+    <!-- <p class="title1" >CSS basic font-size không có font-weight</p>
+    <p class="title2"> CSS basic có font-weight </p>
+
+    <img src="" alt=""> -->
+   <ul class="ul">
+    <li>1</li>
+   </ul>
+    <section class="container">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>
+           <section> 
+                <p>Lorem, ipsum.</p>
+            </section>
+            <p>thẻ p là con của thẻ div </p>
+        </div>
+        <section>css </section>
+        <article> article </article>
+        <ul>
+            <li>xin chào jv11</li>
+        </ul>
+        <ul>
+            <li>hello jv11</li>
+        </ul>
+        <button class="btn">click hover</button>
+        <input type="text" class="input">
+        <p class="after"> áp dụng after  </p>
+        <p class="before"> áp dụng before </p>
+    </section>
+    <h1 class="title"> học CSS </h1>
+    <a href="">home</a>
+    <a href="">about</a>
+   <br>
+    <div class="box box1">
+        box-model 1
+    </div>
+    <div class="box box1">
+        box-model 1
+    </div>
+    <div class="box box2">
+        box-model 2
+    </div>
+    <div class="box anh">
+        box-model 2
+    </div>
+
+</body>
+</html>
