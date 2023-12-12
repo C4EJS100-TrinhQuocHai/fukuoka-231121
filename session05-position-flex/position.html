@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* margin-top: 50px; */
+            position: relative;
+            top: 50px;
+            /* tức là cách trên 50px thì element sẽ dịch xuống dưới */
+            left: 50px;
+            /* left:50 tức là cách bên trái 50px element sẽ dịch sang bên phải */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+          .box3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(22, 241, 194);
+            /* position: relative; */
+        }
+        .absolute{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+            top: 0;
+            right: 0;
+        }
+        .parent{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        position : mục đích định vị,vị trí của element
+        1.static  : trạng thái mặc định
+        2.relative : vị trí tương đối
+        -Nếu 1 element mà có thuộc tính position có giá trị là relative thì nó sẽ lấy
+        vị trí ban đầu của nó đang đứng làm gốc
+        -nó sẽ lấy vị trí ban đầu của nó làm gốc
+        3.absolute
+        -position:absolute
+        -nó sẽ ăn theo thằng  chứa nó gần nhất có thuộc tính là 
+        position (absolute,relative,fixed,sticky) tức là nó sẽ lất vị trí thằng chứa làm gốc
+        -nếu không có thằng cha chứa nó có thuộc tính position thì sẽ ăn theo kích
+        thước của màn hình
+        4.fixed
+        -fixed thưỜng dùng để làm thanh header không di chuyển
+        5.sticky
+        -áp dụng: thường khi scroll nó mới ăn thuộc tính
+     -->
+     <div class="box1">
+        box1
+     </div>
+
+    <div class="box2">
+        box2
+    </div>
+   <div class="parent">
+        <div class="box3">
+            box3
+            <div class="absolute">
+               absolute
+            </div>
+        </div>
+   </div>
+</body>
+</html>
