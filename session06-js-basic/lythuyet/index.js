@@ -1,0 +1,1 @@
+alert("cách 3 external js");
