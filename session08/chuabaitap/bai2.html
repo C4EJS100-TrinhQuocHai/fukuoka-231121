@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        nhập đoạn text sau đó in ra chuỗi text ngược lại
+        -b1: khi người dùng nhập text phải lấy ra được kết quả của người dùng nhập
+        -.length là đếm số phần tử trong chuỗi
+     -->
+     <script>
+        let text=prompt("mời bạn nhập chuỗi");
+        //12345
+        console.log(text.length);
+        let result="";
+        for (let i = text.length-1; i>=0; i--) {
+           result+=text[i];
+        }
+        console.log(result);
+     </script>
+</body>
+</html>

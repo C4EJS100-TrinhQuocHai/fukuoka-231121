@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Bài 3: nhập số nguyên n sau đó in ra dãy thoả mãn yêu cầu
+        3
+            1 2 3
+            2 3 4
+            3 4 5
+        ******
+        4
+            1 2 3 4
+            2 3 4 5
+            3 4 5 6
+            4 5 6 7
+
+        -dùng for lồng để giải quyết bài toán
+        -tổng số các hàng là số lần lặp của i
+        -giá trị của cột ở các hàng là giá trị của j
+     -->
+     <script>
+        for (let i = 0; i < 3; i++) {
+          
+            for (let j= i+1; j <= i+3; j++) {
+
+                document.write(j);
+            }
+            document.write("<br>");
+        }
+     </script>
+</body>
+</html>

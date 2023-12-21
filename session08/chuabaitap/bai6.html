@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+        Bài6: Kiểm tra số hoàn hảo
+        Số hoàn hảo là gì?
+        Số hoàn hảo là số có tổng các ước nhỏ hơn nó bằng chính nó
+        VD: 6 có các ước nhỏ hơn nó : 1 2 3 1+2+3=6
+        VD:28 có các ước nhỏ hơn nó : 1 2 4 7 14  
+
+        -Khi người dùng nhập vào 1 số thì phải đi tìm các ước trước
+        -Sau khi có các ước nhỏ hơn nó thì cộng các ước lại
+     -->
+     <script>
+        let number= +prompt("mời nhập số cần kiểm tra");
+        let sum=0;
+        for (let i = 1; i < number; i++) {
+            // 5 là chia lấy dư nếu dư 0 là chia hết 
+           if(number%i==0){
+            //in ra các ước số
+            console.log(i);
+            // cộng tổng các ước số lại
+            sum=sum+i
+           }
+        }
+        //kết thúc for đi so sánh xem tổng các ước có bằng chính nó hay không?
+        if(sum==number){
+            // dùng dấu `` để truyền biến vào trong chuỗi
+            console.log(`${number} là số hoàn hảo!`);
+        }else{
+            console.log(`${number} không phải là số hoàn hảo!`);
+        }
+     </script>
+</body>
+</html>

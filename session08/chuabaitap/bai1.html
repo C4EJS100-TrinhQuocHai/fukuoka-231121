@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            Tính giai thừa của một số nguyên bất kì
+            6!=6*5*4*3*2*1
+            2!=2*1
+            0!=1
+         */
+        let number=+prompt("mời bạn nhập số cần tính giai thừa!");
+        let tich=1;
+        for (let i =1;  i <=number; i++) {
+            
+           console.log("iii",i);
+
+            // tich=tich*i
+            tich*=i;
+            /* 
+           i=1 tich= 1*1=1
+           i=2 tich= 1*2=2
+           i=3 tich= 2*3=6
+           i=4 tich= 6*4=24
+           i=5 tich= 24*5=120
+             */
+        }
+        console.log(`kết quả của ${number} giai thừa là: ${tich}`);
+    </script>
+</body>
+</html>

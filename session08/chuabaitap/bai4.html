@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 
+        in ra 15 số đầu tiên trong dãy fibonaci
+        fibonaci là gì?
+        số sau bằng tổng 2 số trước bắt đầu 0 1
+        0 1 1 2 3 5 8 13 21 34 ......
+     -->
+     <script>
+        let a=0;
+        let b=1;
+        for (let i = 1; i <= 15; i++) {
+          document.write(a,"<br>");
+          let c=a+b;
+          a=b;
+          b=c;
+        }
+        /* &nbsp  */
+     </script>
+</body>
+</html>

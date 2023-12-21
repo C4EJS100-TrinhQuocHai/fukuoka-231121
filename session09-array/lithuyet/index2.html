@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Các phương thức
+        1.split():dùng để chuyển 1 chuỗi thành 1 mảng.
+        2.reverce(): đảo ngược mảng
+        3.join(): chuyển mảng thành chuỗi
+        4.indexOf: kiểm tra phần tử có trong mảng hay không 
+        -nếu có trả về vị trí nếu không có trả về -1
+        5.includes: kiểm tra phần tử có trong mảng hay không
+        -true/flase
+        6.sort(): sắp xếp theo bảng mã assci
+        7.slice: 
+        bản chất sao chép ra 1 mảng mới
+     -->
+     <script>
+        let text="hello jv11";
+        // let result=text.split(" ");
+        // console.log(result);
+        let numbers=[1,2,3,4,5,6];
+
+    //     numbers.reverse();
+    //     console.log(numbers);
+    //    let textJoin= numbers.join("+");
+    //     console.log(textJoin);
+        let check= numbers.indexOf(33);
+        console.log(check);
+        let students=["hoa","an","tùng","bình"];
+
+        for (let index of students) {
+            console.log(index);
+        }
+        let std1= students.slice(1,3);
+        console.log(std1);
+        // students.sort();
+        console.log(students);
+     </script>
+</body>
+</html>

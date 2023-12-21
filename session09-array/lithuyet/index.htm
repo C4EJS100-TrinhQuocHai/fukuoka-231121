@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    1.Array :Mảng là kiểu dữ liệu thuộc loại phức tạp(reference type);
+    Nó dùng để chứa tất cả mọi loại dữ liệu,
+    Các phần tử trong mảng ngăn cách bởi dấu phẩy,
+    2.Cách khai báo 1 mảng
+     2.1: let array=[];
+          tên mảng đặt tên có ý nghĩa là vẫn tuân theo camel-case
+     2.2 new Array() :(tham khảo thôi!)
+    3.CRUD với mảng:
+     C:CREATE-thêm phần tử vào trong mảng
+     -push(): là 1 phương thức dùng cho mảng để thêm phần tử vào vị trí cuối cùng của mảng
+     -unshift() :thêm phần tử vào vị trí đầu của mảng.
+     -splice() : thêm theo mục đích
+     R:Read
+     -hiển thị nó ra
+     U:Update -Cập nhật
+     -cập nhật theo index
+     -có thể dùng splice
+     D:Delete-Xoá
+     -splice
+     -pop(): xoá phần tử cuối cùng
+     -shift(): xoá phần tử đầu tiên
+     4.Các kiến thức nhớ của mảng
+      -length là độ dài của mảng.
+      -chỉ số index của các phần tử trong mảng bắt đầu từ 0
+      -có thể lấy các phần tử trong mảng theo index
+ -->
+ <script>
+    let array=["hoa",5,NaN,null,[]];
+    // console.log(array[1]);
+    // console.log(array.length);
+    //khai báo mảng sinh viên
+    let students=[];
+        students.push("vân");
+        students.push("hoa");
+        students.unshift("minh");
+        // ["minh","vân","hoa"]
+        students.splice(1,1,"hồng vân");
+        students[0]="thanh";
+        students.splice(1,1)
+        console.log("student",students);
+
+    for (let i = 0; i < students.length; i++) {
+
+            console.log(students[i]);
+    }
+ </script>
+</body>
+</html>
