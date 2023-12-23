@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        IIFE: immediately invoke function expression 
+        hàm tự gọi lại chính nó
+     -->
+    <script>
+        function sayHello() {
+            console.log("1111");
+        }
+        function sayHello() {
+            console.log("2222");
+        }
+        sayHello();
+        let a=6;
+        (
+              function sayHello() {
+                console.log("1111");
+            }
+        )();
+        (
+                function sayHello() {
+                    console.log("22222");
+                }
+         )()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    1.Function :Hàm
+        o Hàm trong javascript là một chương trình con bao gồm
+        một tập hợp các câu lệnh thực hiện một tác vụ cụ thể
+        o Có thể tái sử dụng và bảo trì tốt hơn giúp nâng cao hiệu
+        suất công việc
+    2.Các cách khai báo hàm
+      1. declaration :
+       function sayHello(){
+        // thân của hàm
+        các logic   
+       }
+       -Tên hàm đặt theo quy tắc camel-case,thường là hành động
+       -có thể gọi sau khi khai báo hoặc trước khi khai báo
+      2.expression-function
+      3.arrow function
+      4.IIFE(hàm thường dùng để làm những cái thư viện)
+    3.tham số,đối số trong hàm
+    -Đối số (argument): Khi gọi hàm truyền giá trị cho nó
+    -Tham số(params)  :Giá trị hàm nhận về.
+    4.return trong hàm
+    -return chỉ dùng trong hàm
+    -hàm gặp return thì sẽ dừng chương trình
+    -return kết quả trả về của hàm.
+ -->
+  <script>
+    // mới khai báo thôi chưa có gọi hàm
+    // để hàm được thực thi thì mình phải gọi hàm.
+    function sayHello(a,b) {
+        console.log("xin chào!",a,b);
+    }
+    sayHello("hoa",'lan');
+    sayHello("ánh", 'hùng');
+    function tinhTong(a,b){
+         let total = 0;
+        for (let i = a; i <= b; i++) {
+
+            total += i;
+        }
+        console.log(`Tổng các số  từ ${a} đến ${b} là ${total}`);
+    }
+    tinhTong(1,5);
+    tinhTong(1,7);
+
+    //
+    let result=function tinhDiemTrungBinh(a,b,c) {
+        return 
+        console.log("111111111");
+    }
+    console.log(result(5,6,7));
+    function sinhId() {
+        return Math.floor(Math.random() * 999999999)
+    }
+    let student={
+        name:"hoa",
+        id:sinhId()
+    }
+    console.log("student",student);
+
+
+    
+
+    //  sayHello() // gọi hàm để hàm được chạy
+  </script>
+</body>
+</html>
