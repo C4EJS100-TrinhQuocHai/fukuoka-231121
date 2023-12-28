@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- reduce:dùng để tính toán trả về kết quả thoã mãn
+
+     -->
+    <script>
+        let numbers=[1,2,5,6,8,7,8];
+        let result=numbers.reduce((accumulator,itemValue,index)=>{
+            console.log("accumulator",accumulator);
+            console.log("itemValue",itemValue);
+            return  accumulator+itemValue
+        })
+        console.log(result);
+
+        let carts=[
+            ["pc",5,25000], ["laptop",1, 50000], ["mouse", 2,20000]
+        ]
+        // dung reduce tinh tổng giá tiền phải trả của các sản phẩm.
+        let pay=carts.reduce((accumulator,item,index)=>{
+               console.log(accumulator + item[1] * item[2]);
+            return accumulator+item[1]*item[2]
+        },0)
+        console.log(pay);
+    </script>
+</body>
+</html>
