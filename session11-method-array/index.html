@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addToCart()">mua</button>
+    <script>
+        let store = ["laptop", "keyboard", "mouse", "pc"];
+        let quantity = 0;
+        let cart = [];
+        function addToCart() {
+            // console.log("bắt đầu đi mua hàng");
+            let product= prompt("mời bạn nhập sản phẩm muốn mua");
+            let check= store.indexOf(product);
+            if(check==-1){
+                console.log("sản phẩm không có trong cửa hàng");
+                return;
+            }
+            let flag=-1;
+            for (let i = 0; i < cart.length; i++) {
+                    if(cart[i][0]==product){
+                       flag=i;
+                       break;
+                    }else{
+                      flag=-1;
+                    }
+            }
+            if(flag!=-1){
+                // chứng tỏ sản phẩm đã có trong cart
+                cart[flag][1]=++cart[flag][1];
+            }else{
+                //chứng tỏ chưa có
+                cart.push([product,1])
+            }
+            console.log("cart",cart);
+            // nếu có trả về vị trí không có trả về -1;
+            /* 
+                kiểm tra xem cái sản phẩm người mua có tồn tại trong cửa hàng hay không
+                thì mới cho mua
+                Nếu không có báo sản phẩm không có.
+             */
+            // let flag=true;
+            // for (let i = 0; i < store.length; i++) {
+            //     if(store[i]==product){
+            //         flag=true;
+            //          break;
+            //     }else{
+            //         flag=false;
+            //     }
+                
+            // }
+            // chỉ cần kiểm tra flag thôi
+            //nếu =200 thì là có , =100 là không có
+        }
+        addToCart();
+    </script>
+</body>
+</html>
