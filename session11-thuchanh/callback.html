@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        /* 
+                đầu tiên thầy sẽ đi gọi api để lấy dữ liệu về hiển thị ra màn hình
+                mất thời gian chờ để có data
+                function để lấy dữ liệu
+
+                dưới này thầy có function hiển thị data
+                ==>callback ra đời
+                callback là 1 hàm được truyền làm tham số của hàm khác
+         */
+        let sdt;
+        function xinSoDt(callback11) {
+            // callback1 nhận về là 1 function
+            /* 
+            function goiKhiDaCoSo(sdtNgoc) {
+            console.log(`gọi cho Ngọc theo số ${sdtNgoc}`);
+        }
+             */
+            console.log("Hùng gọi cho Nam xin số Ngọc!");
+            console.log("Nam bảo đỢi Nam tìm số");
+            setTimeout(() => {
+                console.log("đã tìm thấy số");
+                sdt=12345;
+                callback11(sdt);
+            }, 5000);
+        }
+        function goiKhiDaCoSo(sdtNgoc) {
+            console.log(`gọi cho Ngọc theo số ${sdtNgoc}`);
+        }
+        xinSoDt(goiKhiDaCoSo);
+// filter,map,find,  (callback)
+    </script>
+</body>
+</html>

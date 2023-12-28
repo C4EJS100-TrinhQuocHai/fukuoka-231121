@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Đệ quy là gì?
+        Tức là 1 function tự gọi lại chính nó.
+
+     -->
+     <script>
+        function giaiThua(a){
+            if(a==1) return 1// điều kiện dừng
+            return a*giaiThua(--a)
+            /* 
+                5*giaiThua(4)=5*4*giaiThua(3)=5*4*3*giaiThua(2)=5*4*3*2*1
+                  giaiThua(4)=4*giaiThua(3)
+             */
+        }
+       console.log(giaiThua(5));
+     </script>
+</body>
+</html>
