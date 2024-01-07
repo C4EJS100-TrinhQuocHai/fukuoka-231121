@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Object : đối tượng
+        OOP : lập trình hướng đối tượng
+        1. đóng gói
+        2. đa hình
+        3. trừu tưỢng
+        4. kế thừa
+        I-Cách khai báo
+         CÁCH1:
+            Khai báo bằng từ khoá let,const,var.
+            Bao gồm các cặp key(thuộc tính-property) và value,
+            các cặp này ngăn cách với nhau bởi dấu phẩy
+         CÁCH2:
+            Khai báo bằng new Object
+         CÁCH3:
+            Khai báo bằng cách dùng hàm tạo constructor
+         CÁCH4: dùng class (ES6 thầy dạy)
+        **************
+        Thao tác với object
+        CRUD
+        1.C create thêm
+        -Khi muốn thêm thuộc tính cho đối tượng thì chỉ cần lấy đối tượng.thuộc tính
+        2.R read đọc for-in để đọc ra
+        3.U Update
+        4.D delete (đi xoá thuộc tính)
+        delete student.age
+
+
+
+
+     -->
+     <script>
+        let student={
+            name:"vân",
+            age:20,
+            address:"HN"
+        };
+        console.log(student);
+        delete student.age
+        // student.name="nhung";
+        // console.log(student.name);
+        // student.name="vân";
+        // student.age=20;
+        // for (const key_name in student) {
+        //     console.log("key_name",student.key_name);
+        // }
+        // console.log(student);
+
+        // 
+        // let student={
+        //     name:"hoa",
+        //     age:25
+        // };
+        // let student= new Object({name:"hoa"})
+        // console.log("student",student);
+        // let student1={
+        //     name:"hoa",
+        //     age:20
+        // }
+        // let student2={
+        //     name:"hồng",
+        //     age:26
+        // }
+        // let student3 = {
+        //     name: "nhung",
+        //     age: 27
+        //     }
+
+            // function Student(a,b,c) {
+            //         this.name=a;
+            //         this.age=b;
+            //         this.address=c
+            // }
+            // let student1= new Student("hoa",20,"hn");
+            // let student2 = new Student("hồng", 26);
+            // let student3 = new Student("nhung", 27);
+            // console.log("student1",student1);
+
+            /* 
+                bài tập :
+                Khai báo đối tượng product có các thuộc tính sau
+                id
+                name
+                price
+                stock
+                image
+                description
+            */
+
+     </script>
+</body>
+</html>

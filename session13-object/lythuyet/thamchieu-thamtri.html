@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Tham chiếu tham trị trong javascript
+        ĐỐI với kiểu dữ liệu đơn giản(nguyên thuỷ là kiểu dữ liệu tham trị)
+         đi sao chép giá trị gán cho thằng khác còn ở 2 địa chỉ ô nhớ khác nhau
+        
+         ĐỐI với kiểu dữ liệu phức tạp( tham chiếu)
+         đi gán lại địa chỉ ô nhớ
+
+     -->
+    <script>
+
+        let a=5;
+        let b=a;
+        a=15;
+        console.log(b);
+
+        let obj1={
+            name:"hoa"
+        }
+        let obj2=obj1;
+        //  bản chất đi gán địa chỉ ô nhớ
+        obj1.name="nhung";
+        console.log(obj2.name);
+        /* 
+            Ánh : 15 nhung
+            Hùng : 5 hoa
+            Ngọc : 5 nhung
+         */
+        function tinhTong(a1,b1) {
+            return a1+b1
+        }
+        console.log(tinhTong(a,b));
+    </script>
+</body>
+</html>

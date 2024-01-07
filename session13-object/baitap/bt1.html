@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" id="text">
+<button onclick="addToCart()">mua</button>
+<button onclick="payCart()">thanh toán</button>
+
+<body>
+    <!-- 
+        DANH SÁCH CÁC SẢN PHẨM TRONG CỬA HÀNG
+        let products=
+        [
+            {
+                id:115,
+                name:"banhmi1",
+                price:5000,
+
+            },
+            {
+                id:116,
+                name:"banhmi2",
+                price:6000,
+                
+            },
+            {
+                id:117,
+                name:"banhmi3",
+                price:7000,
+            },
+             {
+                id:118,
+                name:"banhmi4",
+                price:8000,
+            }
+        ]
+        let cart=[];
+        1.cho người dùng nhập tên sản phẩm muốn mua
+        2.Nếu có cho đi mua nếu không có  báo không có hàng bán rồi return
+        3.kiểm tra xem trong cart có sản phẩm đó chưa có thì tăng số lượng
+        không có thì push vào bình thường
+        4.tính bill của người đi mua hàng
+
+        cart:[
+             {
+                id:115,
+                name:"banhmi1",
+                price:5000,
+                quantity:1
+             },
+              {
+                id:116,
+                name:"banhmi2",
+                price:6000,
+                quantity:5
+             }
+        ]
+     -->
+     <script>
+        //function đi mua hàng
+        function addToCart() {
+            console.log("đi mua hàng thôi");
+            let inputValue=document.getElementById("text").value;
+            console.log(inputValue);
+        }
+         function payCart() {
+                console.log("đi thanh toán");
+            }
+     </script>
+</body>
+</html>
