@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            background-color: red;
+        }
+        .head{
+            color: green;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title"> xin chào học viên fukuoka </h1>
+    <button onclick="changeDom()">change</button>
+    <p class="head1">thẻ p1 </p>
+    <p class="head1">thẻ p2 </p>
+    <div class="head">thẻ div</div>
+    <!-- 
+        DOM- Document Object Model 
+        mô tả  tài liệu dạng đối tượng 
+        -Khi chương trình được tải(load) thì trình duyệt sẽ tạo ra mô hình cây DOM
+        -Từ mô hình cây DOM này thì chúng ta có thể
+        + thêm ,sửa,xoá  các phần tử HTML.
+        -Các thành phần của DOM
+        gồm 3 thành phần
+        1.Element (tên thẻ,div,p,session,article,aside...)
+        2.attribute (các thuộc tính : class,id,src,href...)
+        3.text (nội dung)
+        I-CÁC CÁCH ĐỂ LẤY ELEMENT 
+        C1: LẤY THEO ID.(id là duy nhất sẽ trả về 1 element)
+        document.getElementById("tên id");
+        C2: LẤY THEO CLASS
+        document.getElementsByClassName("tên class");
+        ==> trả về 1 HTML collection dạng mảng : có thể dùng for duyệt các phần tử
+        trong mảng,lấy các phần tử theo index
+        C3: LẤY THEO TÊN THẺ (TAG_NAME)
+        document.getElementsByTagName("tên thẻ vào")
+        ==> trả về 1 HTML collection dạng mảng....
+        C4: LẤY THEO SELECTOR.
+        document.querySelector("tên bộ  chọn selector")
+        ==  trả về 1 đối tưỢng
+        C5: Lấy theo querySelectorAll
+        ==> trả về 1 NODELIST dạng mảng có thể truy cập theo index,dùng for để lặp các phần tử
+     -->
+    <script>
+        function changeDom() {
+            let getElementById = document.getElementById("title");
+            getElementById.className = "heading"
+            let getElementsByClassName1 = document.getElementsByClassName("head");
+            // getElementsByClassName1[1].style.color = "red";
+            let getElementsByTagName1= document.getElementsByTagName("p");
+            getElementsByTagName1[0].style.fontSize="50px";
+            getElementsByTagName1[0].style.fontSize = "50px";
+
+            // console.log("1111111", getElementsByClassName1[1]);
+        }
+        // let getElementById= document.getElementById("title");
+        // console.log("element", getElementById);
+        // getElementById.className="heading"
+        // let getElementsByClassName = document.getElementsByClassName("head");
+        // console.log("1111111", getElementsByClassName[1]);
+        // let getElementsByTagName1= document.getElementsByTagName("p");
+        // console.log("11111111", getElementsByTagName1);
+        let getElementByQuerySelector= document.querySelector(".head2")
+        // getElementByQuerySelector.style.color="yellow";
+        let getElementByQuerySelectorAll = document.querySelectorAll(".head1");
+        console.log(getElementByQuerySelectorAll);
+        getElementByQuerySelectorAll[1].style.fontSize="100px";
+        let obj = {
+            name: "huyền",
+        }
+        // thầY muốn thêm thuộc tính age cho đối tượng obj thì làm như thế nào?
+        obj.age = "25";
+    </script>
+</body>
+
+</html>

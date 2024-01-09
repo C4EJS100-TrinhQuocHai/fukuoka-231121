@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 onclick="eventDom()">click</h1> -->
+    <h1 >click</h1>
+    <input type="text" value="">
+    <button >add</button>
+    <!-- 
+        Event: những sự kiện tương tác
+        -click chuột,bàn phím,hover....
+        C1: đặt tên sự kiện trực tiếp vào các thẻ element ví dụ như (onclick,onmousemove...)
+        C2: lấy element ra rồi addEvent Cho  nó
+     -->
+     <script>
+        function eventDom(){
+            console.log("sự kiện click");
+        }
+        let element= document.getElementsByTagName("h1");
+        element[0].addEventListener("click",()=>{
+            console.log("bắt đầu gọi sự kiện click");
+        })
+        function add() {
+            console.log("giá trị người dùng nhập:",document.getElementsByTagName("input")[0].value);
+        }
+        document.addEventListener("keypress",(event)=>{
+            // console.log("1111",event.keyCode);
+            if(event.keyCode==13){
+                add();
+            }
+        })
+     </script>
+</body>
+</html>
