@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> storing data in the browser </h1>
+    <!-- 
+        storing data in the browser
+        (lưu trữ dữ liệu ở trình duyệt)
+        Cung cấp cho mình 3 nơi lưu trữ 
+        1.localStorage
+        -dữ liệu khi lưu lại sẽ không bị mất dữ liệu
+        -dung lượng tầm 5MB-10MB
+        vd 1 cái ảnh trên máy tính có dung lượng tầm 100kb
+        1MB=1024KB
+        Nếu lưu trên local thì lưu được tầm 50-100 cái
+        2.sessionStorage
+        - gọi là phiên làm việc tức là dữ liệu chỉ được lưu trữ trong quá trình
+        làm việc,khi tắt trình duyệt thì dữ liệu sẽ bị mất đi.
+        -dung lượng tầm 3MB-5MB
+        + (30-50 cái);
+        3.cookies
+        cơ chế nó lưu như thế nào,dung lượng, cách lưu trữ 
+
+        *******************************
+        Cách lưu trữ dữ liệu
+        I.local storage 
+        1.lưu
+        localStorage.setItem("tên_key muốn lưu",giá trị lưu);
+        Lưu ý: khi lưu dữ liệu đối với dạng array hoặc object thì
+        trước khi lưu phải chuyển sang định dạng JSON.
+        2.lấy về
+        localStorage.getItem("tên_key");
+        3.Xoá
+        cách xoá 1 key
+        localStorage.removeItem("");
+        xoá nhiều key 
+        localStorage.clear()
+
+     -->
+     <script>
+        // let fullName= "nguyễn minh anh";
+        // let age=25;
+        // localStorage.setItem("name",fullName);
+        // localStorage.setItem("age",age);
+        // localStorage.setItem("address","HN");
+        // sessionStorage.setItem("scholl","RA");
+        let getItem= localStorage.getItem("addresss");
+        console.log("1111",getItem);
+        // localStorage.removeItem("age");
+        // localStorage.clear();
+        let student={
+            name:"hoa",
+        }
+        //JSON.stringify(student) : chuyển sang định sạng JSON để lưu
+        // tại sao phải chuyển ???
+        // vì localstorage chỉ cho phép lưu object,array dưới dạng JSON.
+        //JSON là định dạng dữ liệu chứ không phải kiểu dữ liệu.
+        localStorage.setItem("student",JSON.stringify(student));
+        /* 
+            khi lấy về dùng vẫn đang ở định dạng JSON
+            sau khi lấy về phải parse ra để dùng bình thường.
+        */
+       let result= JSON.parse(localStorage.getItem("student"));
+    //    console.log("2222222",JSON.parse(result));
+       console.log("2222222",result );
+    //    localStorage.setItem("student",JSON.stringify({ ...student, age: 20 }))
+       localStorage.setItem("student", JSON.stringify({ ...student,name:"hồng" }));
+        // dấu 3 chấm là toán tử spread (clone )
+     </script>
+</body>
+</html>

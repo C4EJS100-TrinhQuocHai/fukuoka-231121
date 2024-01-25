@@ -100,7 +100,12 @@
             return Math.floor(Math.random() * 99999999 + new Date().getMilliseconds());
         }
         // tạo mảng chứa danh sách sinh viên
-        let users = [];
+        // let users =  [];
+
+        let users = JSON.parse(localStorage.getItem("users"))||[];
+        /* 
+            falsy trusthy
+         */
 
         // khởi tạo hàm thêm sinh viên
         function addStudent(e) {
@@ -152,6 +157,7 @@
                         for (let i = 0; i < genders.length; i++) {
                             genders[i].checked = false
                         }
+                        localStorage.setItem("users", JSON.stringify(users));
                         return;
                     }
 
@@ -159,7 +165,9 @@
             }
             //push đối tưỢng user này vào trong cái mảng user
             users.push(user);
-            console.log("danh sách học viên", users);
+            // khi thêm thành công thì lưu lại
+            localStorage.setItem("users",JSON.stringify(users));
+            // console.log("danh sách học viên", users);
             // sau khi thêm vào rồi thì đi render ra 
             renderStudent();
             // sau khi thêm vào xong thì phải cho các field nhập  về rỗng
@@ -194,6 +202,7 @@
             }
             document.getElementById("tbody").innerHTML = elm;
         }
+        renderStudent();
         // tạo hàm xoá user theo id
         function deleteUser(id) {
             // console.log("111111",id);
@@ -212,6 +221,7 @@
             }
             users.splice(deleteIndex, 1);
             // sau khi xoá xong rồi gọi hàm render
+            localStorage.setItem("users", JSON.stringify(users));
             renderStudent();
         }
         // tạo 1 biến để id khi edit

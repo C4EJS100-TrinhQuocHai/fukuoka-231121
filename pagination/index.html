@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+            display: flex;
+            width: 200px;
+            margin: 0 auto;
+            justify-content: space-evenly;
+            /* gap: 10px; */
+        }
+
+        ul li button {
+            border-radius: 50%;
+            border: none;
+            width: 30px;
+            height: 30px;
+            background-color: tomato;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Phân trang
+        let students=[1,2,3,4,5,6,7,8,9,10,11,12,13];
+        phân tích:
+        1.muốn có bao nhiêu sản phẩm trên 1 trang 6.
+        let itemOnePage=6;
+        2.tính số trang.
+        let pages= Math.ceil(students.length/itemOnePage); 3
+     -->
+    <!-- tạo số trang -->
+    <h1>danh sách học sinh</h1>
+     <div class="studens">
+     </div>
+    <ul id="pages">
+    </ul>
+    <script>
+        let students = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        let itemOnePage = 3;
+        let pages = Math.ceil(students.length / itemOnePage)
+        let currentPage=1;
+        let start;
+        let end;
+        // function tính toán start và end
+        function calculateStartEnd(page) {
+            start= (page-1)*itemOnePage;
+            end  =  page*itemOnePage;
+        }
+        calculateStartEnd(currentPage);
+        function renderItem(){
+            let html="";
+            for (let i = 0; i < students.length; i++) {
+                if(i>=start && i<end){
+                      html +=` <p>${students[i]}</p>`  
+                }
+            }
+            document.getElementsByClassName("studens")[0].innerHTML=html
+        }
+        renderItem();
+        // dùng for để hiển thị số trang
+        function showPage() {
+            let html = "";
+            for (let i = 0; i < pages; i++) {
+                html +=
+                    `
+                         <li>
+                            <button onclick=choosePage(${i})>${i+1}</button>
+                        </li> 
+                    `
+            }
+            document.getElementById("pages").innerHTML =
+                `
+                        <button> Pre </button>
+                                 ${html}
+                         <button onclick="nextPage()"> Next </button>
+                    `
+        }
+        showPage(); 
+        // function click chọn page
+        function choosePage(page) {
+            // console.log("11111111",page);
+            calculateStartEnd(page+1);
+            renderItem();
+        }
+        // function next page
+        function nextPage() {
+            console.log("currentPage",currentPage);
+            console.log("pages",pages);
+            currentPage++;
+            calculateStartEnd(currentPage);
+            renderItem();
+            if(currentPage== pages){
+                currentPage=pages-1
+            }
+            //  console.log("1111", currentPage);
+           
+        }
+    </script>
+</body>
+
+</html>
